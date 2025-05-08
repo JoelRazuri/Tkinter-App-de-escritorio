@@ -9,7 +9,7 @@ class ConnectDB():
         self.db = db
         self.cursor = pymysql.cursors.DictCursor
 
-    def get_conn(self):
+    def connect(self):
         try:
             connect = pymysql.connect(self.host, self.user, self.password, self.db, cursorclass=self.cursor)
         except pymysql.MySQLError as err:
